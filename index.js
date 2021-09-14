@@ -81,8 +81,14 @@ let activityFactory = (event) => {
 
 randomButton.addEventListener('click', activityFactory)
 
+
 let anotherFunction = () => {
     console.log("Yoink!")
+}
+
+
+let testFunction = () => {
+    console.log("Hey guys, I'm a troll")
 }
 
 
@@ -102,3 +108,5 @@ let anotherFunction = () => {
 
 
 document.addEventListener('DOMContentLoaded', init);
+
+
