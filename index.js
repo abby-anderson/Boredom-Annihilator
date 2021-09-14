@@ -101,6 +101,17 @@ let activityFactory = (event) => {
 randomButton.addEventListener('click', activityFactory)
 
 
+let anotherFunction = () => {
+    console.log("Yoink!")
+}
+
+
+let testFunction = () => {
+    console.log("Hey guys, I'm a troll")
+}
+
+
+
 
 //deliverables to aim for:
 //randomize button, click event DONE QUICKANDIRTY
@@ -116,3 +127,5 @@ randomButton.addEventListener('click', activityFactory)
 
 
 document.addEventListener('DOMContentLoaded', init);
+
+

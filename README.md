@@ -1,6 +1,6 @@
 # Boredom Annihilator
 Do you want to do something fun, but you need some inspiration?
 
-## setup
+## Setup
 
-### group members: Amie, Steve, Gabriel, Abby
+### Group Members: Amie, Steve, Gabriel, Abby
