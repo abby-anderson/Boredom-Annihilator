@@ -27,6 +27,9 @@ let saveActivity = (event) => {
         event.preventDefault();
 
         //here's where we could add the fetch POST to save these to the local db
+        const newListName = document.querySelector("#list-name-input").value;
+        console.log(newListName);
+
 }
 
 let deleteActivity = (event) => {
@@ -35,8 +38,7 @@ let deleteActivity = (event) => {
     console.log(event.target.parentNode);
     event.target.parentNode.remove();
 
-    //would like to also add a section of this regarding DELETE fetch, so that we can delete items that were saved to a local db list
-
+    //would like to also add a section of this regarding DELETE fetch, so that we can delete items that were saved to a local db list --maybe would be in a separate function just for separation of concerns
 }
 
 let callSavedActivity = () => {
@@ -44,6 +46,10 @@ let callSavedActivity = () => {
 
     //this would likely be a get request to the local db, and would show them on the page
 
+}
+
+let completeActivity = () => {
+    //this function will be called when you click on the done button, and it will 
 }
 
 let renderActivity = (data) => {
@@ -55,16 +61,29 @@ let renderActivity = (data) => {
     newLi.textContent = newActivity;
     listContainer.appendChild(newLi);
 
+    //change the 'save' text to a heart
     const saveButton = document.createElement('button');
     saveButton.textContent = "save";
-    newLi.appendChild(saveButton);
+    saveButton.className = 'btn btn-primary'; 
+    newLi.prepend(saveButton);
     saveButton.addEventListener('click', selectActivity);
 
+    //change the 'delete' text to an x
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'delete';
     deleteButton.className = 'delete-button';
-    newLi.appendChild(deleteButton);
+    deleteButton.className = 'btn btn-danger';
+    newLi.prepend(deleteButton);
     deleteButton.addEventListener('click', deleteActivity);
+
+    //going to add another button, a check mark, to check once you've completed an activity. ideally it will save all the completed activities to a db.json object
+    const doneButton = document.createElement('button');
+    doneButton.textContent = 'done';
+    doneButton.className = 'done-button';
+    doneButton.className = 'btn btn-success';
+    newLi.prepend(doneButton);
+    doneButton.addEventListener('click', completeActivity);
+
 }
 
 let fetchData = (url) => {
