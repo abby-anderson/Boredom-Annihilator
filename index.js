@@ -81,6 +81,11 @@ let activityFactory = (event) => {
 
 randomButton.addEventListener('click', activityFactory)
 
+let anotherFunction = () => {
+    console.log("Yoink!")
+}
+
+
 
 
 //deliverables to aim for:
