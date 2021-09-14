@@ -96,24 +96,24 @@ let renderActivity = (data) => {
     
     //change the 'save' text to a heart
     const saveButton = document.createElement('button');
-    saveButton.textContent = "save";
+    saveButton.textContent = "save ♥";
     saveButton.className = 'btn btn-primary pushingtotheside'; 
     newLi.prepend(saveButton);
     saveButton.addEventListener('click', selectActivity);
     
     //change the 'delete' text to an x
     const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'delete';
-    deleteButton.className = 'delete-button';
+    deleteButton.textContent = 'delete 🗑️';
+    deleteButton.className = 'delete-button pushingtotheside';
     deleteButton.className = 'btn btn-danger';
     newLi.prepend(deleteButton);
     deleteButton.addEventListener('click', deleteActivity);
     
     //going to add another button, a check mark, to check once you've completed an activity. ideally it will save all the completed activities to a db.json object
     const doneButton = document.createElement('button');
-    doneButton.textContent = 'done';
+    doneButton.textContent = 'done ✅';
     doneButton.className = 'done-button';
-    doneButton.className = 'btn btn-success';
+    doneButton.className = 'btn btn-success pushingtotheside';
     newLi.prepend(doneButton);
     doneButton.addEventListener('click', completeActivity);
     
