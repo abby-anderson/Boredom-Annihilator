@@ -10,6 +10,9 @@ const listName = document.querySelector('#list-name')
 const randomButton = document.querySelector('#random-button');
 const formSave = document.querySelector('form-save');
 const formList = document.querySelector('#selected-activities');
+const activityDropDown = document.querySelector('#activity-dropdown')
+const activityListByType = document.querySelector('#activities-by-type-container')
+
 
 
 let selectActivity = (event) => {
@@ -100,6 +103,71 @@ let activityFactory = (event) => {
 
 randomButton.addEventListener('click', activityFactory)
 
+////////dropdown
+
+
+let renderType = (type) => {
+    
+    let typeLi = document.createElement('li')
+    typeLi.id = "type-li"
+    typeLi.innerText = type
+    activityListByType.append(typeLi)
+}
+
+// let type_Url = 'http://www.boredapi.com/api/activity?type='
+
+let fetchForDropdown = (url) => {
+    fetch(url)
+    .then(response => response.json())
+    .then(type => renderType(type.activity))
+}
+
+let handleChangeFactory = (event) => {
+
+    let type_Url = 'http://www.boredapi.com/api/activity?type='
+
+    let activityType = event.target.value
+    console.log(activityType)
+
+        if (activityType === 'education') {
+        fetchForDropdown(type_Url + `${activityType}`)
+
+        } else if (activityType === 'recreation') {
+        fetchForDropdown(type_Url + `${activityType}`)
+
+        } else if (activityType === 'socail') {
+        fetchForDropdown(type_Url + `${activityType}`)
+
+        } else if (activityType === 'diy') {
+        fetchForDropdown(type_Url + `${activityType}`)
+
+        } else if (activityType === 'charity') {
+        fetchForDropdown(type_Url + `${activityType}`)
+
+        } else if (activityType === 'cooking') {
+        fetchForDropdown(type_Url + `${activityType}`)
+
+        } else if (activityType === 'relaxation') {
+        fetchForDropdown(type_Url + `${activityType}`)
+    
+        } else if (activityType === 'music') {
+        fetchForDropdown(type_Url + `${activityType}`)
+
+        } else if (activityType === 'busywork') {
+        fetchForDropdown(type_Url + `${activityType}`)
+        }
+
+
+}
+
+
+activityDropDown.addEventListener('change', handleChangeFactory)
+
+
+
+
+/////////
+
 
 let anotherFunction = () => {
     console.log("Yoink!")
@@ -127,5 +195,3 @@ let testFunction = () => {
 
 
 document.addEventListener('DOMContentLoaded', init);
-
-
