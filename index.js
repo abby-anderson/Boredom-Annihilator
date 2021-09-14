@@ -10,6 +10,9 @@ const listName = document.querySelector('#list-name')
 const randomButton = document.querySelector('#random-button');
 const formSave = document.querySelector('form-save');
 const formList = document.querySelector('#selected-activities');
+const activityDropDown = document.querySelector('#activity-dropdown')
+const activityListByType = document.querySelector('#activities-by-type-container')
+
 
 
 let selectActivity = (event) => {
@@ -94,7 +97,7 @@ let renderActivity = (data) => {
     //change the 'save' text to a heart
     const saveButton = document.createElement('button');
     saveButton.textContent = "save";
-    saveButton.className = 'btn btn-primary'; 
+    saveButton.className = 'btn btn-primary pushingtotheside'; 
     newLi.prepend(saveButton);
     saveButton.addEventListener('click', selectActivity);
     
@@ -130,7 +133,86 @@ let activityFactory = (event) => {
 
 listName.addEventListener('submit', saveActivity);
 randomButton.addEventListener('click', activityFactory)
+<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', init);
+=======
+
+////////dropdown
+
+
+let renderType = (type) => {
+    
+    let typeLi = document.createElement('li')
+    typeLi.id = "type-li"
+    typeLi.innerText = type
+    activityListByType.append(typeLi)
+}
+
+// let type_Url = 'http://www.boredapi.com/api/activity?type='
+
+let fetchForDropdown = (url) => {
+    fetch(url)
+    .then(response => response.json())
+    .then(type => renderType(type.activity))
+}
+
+let handleChangeFactory = (event) => {
+
+    let type_Url = 'http://www.boredapi.com/api/activity?type='
+
+    let activityType = event.target.value
+    console.log(activityType)
+
+        if (activityType === 'education') {
+        fetchForDropdown(type_Url + `${activityType}`)
+
+        } else if (activityType === 'recreation') {
+        fetchForDropdown(type_Url + `${activityType}`)
+
+        } else if (activityType === 'socail') {
+        fetchForDropdown(type_Url + `${activityType}`)
+
+        } else if (activityType === 'diy') {
+        fetchForDropdown(type_Url + `${activityType}`)
+
+        } else if (activityType === 'charity') {
+        fetchForDropdown(type_Url + `${activityType}`)
+
+        } else if (activityType === 'cooking') {
+        fetchForDropdown(type_Url + `${activityType}`)
+
+        } else if (activityType === 'relaxation') {
+        fetchForDropdown(type_Url + `${activityType}`)
+    
+        } else if (activityType === 'music') {
+        fetchForDropdown(type_Url + `${activityType}`)
+
+        } else if (activityType === 'busywork') {
+        fetchForDropdown(type_Url + `${activityType}`)
+        }
+
+
+}
+
+
+activityDropDown.addEventListener('change', handleChangeFactory)
+
+
+
+
+/////////
+
+
+let anotherFunction = () => {
+    console.log("Yoink!")
+}
+
+
+let testFunction = () => {
+    console.log("Hey guys, I'm a troll")
+}
+
+>>>>>>> 26fa763c7d6dee5558fad2feaf8ac1f464fe634d
 
 
 
@@ -147,3 +229,7 @@ document.addEventListener('DOMContentLoaded', init);
 
 
 
+<<<<<<< HEAD
+=======
+document.addEventListener('DOMContentLoaded', init);
+>>>>>>> 26fa763c7d6dee5558fad2feaf8ac1f464fe634d

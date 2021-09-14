@@ -1,16 +1,39 @@
+.center{
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+#heading{
+  text-align: center;
+
+}
+
+
+.pushingtotheside {
+
+  margin-right: 15 px;
+  margin-left: 40px;
+  /* margin-top: 90px;
+  margin-bottom: 200px; */
+}
+
+
+
 .banner {
   width: 100px;
   height: 100px;
 }
 
 body {
-  color: rgb(255, 232, 181);
-  background-color: #00004b;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
 }
 
 .jumbotron{
-  color: rgb(255, 232, 181);
-  background-color: #00004b;
+  color: rgb(255, 255, 255);
+  background-color: #ff0000;
 }
 
 /*div {
