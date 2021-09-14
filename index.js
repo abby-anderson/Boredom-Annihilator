@@ -64,7 +64,7 @@ let renderActivity = (data) => {
     //change the 'save' text to a heart
     const saveButton = document.createElement('button');
     saveButton.textContent = "save";
-    saveButton.className = 'btn btn-primary'; 
+    saveButton.className = 'btn btn-primary pushingtotheside'; 
     newLi.prepend(saveButton);
     saveButton.addEventListener('click', selectActivity);
 
