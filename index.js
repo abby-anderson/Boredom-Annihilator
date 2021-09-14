@@ -81,6 +81,14 @@ let activityFactory = (event) => {
 
 randomButton.addEventListener('click', activityFactory)
 
+let testFunction = () => {
+    console.log("Hey guys, I'm a troll")
+}
+
+
+
+
+
 
 
 //deliverables to aim for:
@@ -97,3 +105,5 @@ randomButton.addEventListener('click', activityFactory)
 
 
 document.addEventListener('DOMContentLoaded', init);
+
+
