@@ -94,7 +94,10 @@ let fetchData = (url) => {
 
 let activityFactory = (event) => {
     event.preventDefault;
-    fetchData(activity_url);   
+    fetchData(`activity_url?type=${type}`);   //?type=VARIABLE 
+    //make 2
+    //oen is normal
+    //one has url?type=VARIABLE
 }
 
 

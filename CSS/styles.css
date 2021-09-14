@@ -1,6 +1,7 @@
 .center{
   margin: auto;
-  width: 50%;
+  width: 800px;
+  height: 390px;
   border: 3px solid green;
   padding: 10px;
 }
@@ -63,4 +64,46 @@ color: white;
 }
 a {
   color: hotpink;
+}
+
+.smallify{
+  scale: 50%;
+}
+
+img {
+  width: 20%;
+  height: auto;
+}
+
+
+
+.bgimg {
+  background-image: url('../images/mediumlogo.jpg');
+  background-repeat: no-repeat;
+  background-position: center; 
+  position: relative;
+ 
+}
+
+#parent {
+  display: flex;
+  border: 3px solid green;
+  width: 500px;
+  margin: auto;
+
+}
+#narrow {
+  width: 50%;
+  background: lightblue;
+  border: 3px solid rgb(76, 0, 255);
+
+  /* Just so it's visible */
+}
+#wide {
+  flex: 1;
+  /* Grow to rest of container */
+  background: lightgreen;
+  border: 3px solid rgb(255, 0, 0);
+
+  /* Just so it's visible */
 }
