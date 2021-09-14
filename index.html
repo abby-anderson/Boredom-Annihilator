@@ -9,7 +9,13 @@
 
 <body>
     <div class="center bgimg">
+    <h1 id="heading">♥ ♥ ♥Boredom ANNIHILATOR♥ ♥ ♥</h1>
     <div id="activity-container" class="">
+        <div>
+            <button class="btn btn-primary" id="random-button">♥ ♥ ♥Annihilate my Boredom!♥ ♥ ♥</button>        
+        </div>
+        <br>
+        <br>
         <div id="list-container" class=""></div>
         <button class="btn btn-primary" id="random-button">Annihilate my Boredom!</button>
             <form id="list-name" class="">
@@ -20,20 +26,24 @@
 
             </ul>
         </form>
-
+    <div id="dropdown-container" class="">
         <label for="select-activity">Filter Activities By Type:</label>
-    <select id="activity-dropdown" name="select-activity">
-      <option value="Education">Education</option>
-      <option value="Recrreational">Recreation</option>
-      <option value="Social">Social</option>
-      <option value="Diy">Diy</option>
-      <option value="Charity">Charity</option>
-      <option value="Cooking">Cooking</option>
-      <option value="Relaxation">Relaxation</option>
-      <option value="Music">Music</option>
-      <option value ="Busywork">Busywork</option>
-    </select>
+        <select id="activity-dropdown" name="select-activity">
+            <option></option>
+            <option value="education">Education</option>
+            <option value="recreational">Recreation</option>
+            <option value="social">Social</option>
+            <option value="diy">Diy</option>
+            <option value="charity">Charity</option>
+            <option value="cooking">Cooking</option>
+            <option value="relaxation">Relaxation</option>
+            <option value="music">Music</option>
+            <option value ="busywork">Busywork</option>
+        </select>
+        <ul id="activities-by-type-container" class="">
 
+        </ul>
+    </div>
 
     </div>
 </div>

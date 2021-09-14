@@ -1,4 +1,21 @@
 {
-    "saved-activities": []
-
+    "saved-activities": [
+        {
+            "name": "To do this weekend",
+            "activities": ["Create a cookbook with your favorite recipes", "Go for a run", "Go to a nail salon"]
+        },
+        {
+            "name": "Next month",
+            "activities": ["Color", "Have a photo session with some friends", "Write a note of appreciation to someone"]
+        },
+        {
+            "name": "winter goals",
+            "activities": ["Go skiing", "Visit the beach", "Read War and Peace"]
+        }
+    ],
+    "completed-activities": [
+        {"activity": "Learn how to whistle with your fingers"},
+        {"activity": "Create and follow a savings plan"},
+        {"activity": "Prepare a dish from a foreign culture"}
+    ]
 }
