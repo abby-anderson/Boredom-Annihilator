@@ -28,6 +28,8 @@ let selectActivity = (event) => {
     selectedActivity.className = 'selected-list-element';
     console.log(event.target.parentNode);
     formList.append(selectedActivity);
+
+
 }
 
 
@@ -98,21 +100,6 @@ let callSavedActivity = () => {
     //this would likely be a get request to the local db, and would show them on the page
 
 
-//     let postSavedActivity = () => {
-//         fetch("url", {
-//             method: "POST",
-//             headers: {
-//                 "Content-Type": "application/json",
-//                 Accept: "application/json",
-//   },
-//             body: JSON.stringify({
-//             name: "",
-//             activities: "",
-//   }),
-// });
-
-//     }
-
     fetch(BASE_URL)
     .then(response => response.json())
     .then(data => console.log(data));
@@ -133,20 +120,32 @@ let completeActivity = (event) => {
     completedList.append(completedActivity);
     //****IMPORTANT - still need to create div, ul element containtainer for these li, then grab the ul element and name it completedList
 
-//     let postCompleteActivity = () => {
-//         fetch("url", {
-//   method: "POST",
-//   headers: {
-//     "Content-Type": "application/json",
-//     Accept: "application/json",
-//   },
-//   body: JSON.stringify({
-//     activity: "",
+    //selecting the activity within completedActivity 
+    const completedActivityValue = completedActivity.lastChild.innerText
+
+    //making new obj for post request
+    const newListCompletedObj = {
+        activity: completedActivityValue
+    }
+    console.log(newListCompletedObj)
+
+    //fetch request to POST to local db
+    const configCompletedObj = {
+        method: "POST",
+        headers: {
+            "content-Type": "application/json",
+        },
+        body: JSON.stringify(newListCompletedObj)
+    };
     
-//   }),
-// });
-//     }
-}
+    fetch(BASE_URL, configCompletedObj)
+    .then(response => response.json())
+    .then(data => data);
+
+} //////ITS ADDING TO THE END OF SAVED ACTIVITIES NOT COMPLETED
+///should we have 2 db one for saved one for completed?
+
+
 
 let renderActivity = (data) => {
     const newActivity = data;
@@ -206,6 +205,7 @@ let activityFactory = (event) => {
 
 
 listName.addEventListener('submit', saveActivity);
+// ***.addEventListener('submit', saveCompletedActivity)
 randomButton.addEventListener('click', activityFactory);
 document.addEventListener('DOMContentLoaded', init);
 
@@ -255,7 +255,6 @@ let handleChangeFactory = (event) => {
     let type_Url = 'http://www.boredapi.com/api/activity?type='
 
     let activityType = event.target.value
-    console.log(activityType)
 
         if (activityType === 'education') {
         fetchForDropdown(type_Url + `${activityType}`)
