@@ -3,17 +3,38 @@
 <head>
     <link href="CSS/bootstrap.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="CSS/styles.css">
+
     <link rel="icon" href="images/icon.jpg">
     
-    <script defer src="index.js"></script>
-</head>
 
+    <script defer src="index.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+
+</head>
 <body>
+
     <div id="saved-list-container" class="left">
         <img src="images/smalllove2.png">
         <ul id="saved-lists">
         </ul>
+
+    <div class="center bgimg">
+    <div id="activity-container" class="">
+        <br>
+        <br>        <br>
+        <br>        <br>
+        <br>        <br>
+        <br>        <br>
+        <br>        <br>
+        <br>        <br>
+        <br>        <br>
+        <br>
+
+        <button class="btn btn-primary" id="random-button">Annihilate my Boredom!</button>
+        
+        
     </div>
+
 
     <div id="completed-list-container" class="right">
         <img src="images/largefinished.png"
@@ -26,11 +47,18 @@
         <div class="thirds1">
             <br><br>
             <form id="list-name" class="">
+
+<div id=parent>
+    <div id="narrow">
+        <img src="images/largesave.png">
+
+        <form id="list-name" class="">
+
             <label></label>
             <input type="text" id="list-name-input" />
             <input type="submit" value="Submit" />
             <ul id="selected-activities" class="">
-                
+
             </ul>
             </form>
         </div>
@@ -61,6 +89,7 @@
         
         
     </div>
+
     
 </div>
 
@@ -82,8 +111,13 @@
         
     </div> -->
     <!-- <div id="wide">
+
+    <div id="wide">
+
+
         <img src='images/largetype.png'>
         <div id="dropdown-container" class="">
+
             <label for="select-activity"></label>
             <select id="activity-dropdown" name="select-activity">
                 <option></option>
@@ -98,10 +132,25 @@
                 <option value ="busywork">Busywork</option>
             </select>
             <ul id="activities-by-type-container" class="">
-                
+
             </ul>
         </div>
     </div> -->
+    </div>
+
+    <div id="completed-list-container">
+        <ul id="completed-list">
+
+        </ul>
+
+    </div>
+
+    <div id="saved-list-container">
+        <ul id="saved-lists">
+
+        </ul>
+
+    </div>
     
 </div>
 
@@ -112,5 +161,4 @@
 
 
 </body>
-
 </html>
