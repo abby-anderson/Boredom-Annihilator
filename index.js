@@ -15,6 +15,7 @@ const formSave = document.querySelector('form-save');
 const formList = document.querySelector('#selected-activities');
 const activityDropDown = document.querySelector('#activity-dropdown')
 const activityListByType = document.querySelector('#activities-by-type-container')
+
 const completedList = document.querySelector('#completed-list');
 //still need to create and grab ul element for completed lists, and define it here!
 //same with saved lists
@@ -22,6 +23,7 @@ const completedList = document.querySelector('#completed-list');
 //called on click event when the save button on a list item is clicked
 //applied to save button inside render function
 //saveButton.addEventListener('click', selectActivity);
+
 let selectActivity = (event) => {
     //this function is to actually handle the selection of activities so that they can be saved on submit
     const selectedActivity = event.target.parentNode;
@@ -147,6 +149,7 @@ let completeActivity = (event) => {
 
 
 
+
 let renderActivity = (data) => {
     const newActivity = data;
     console.log(newActivity);
@@ -179,16 +182,19 @@ let renderActivity = (data) => {
     doneButton.addEventListener('click', (event) => {
         event.preventDefault()
         completeActivity(event) 
+
         party.confetti(event, {
             shapes: ["star"],
             gravity: 75
         })
         // party.sparkles(event)
     });
+
     function reset(){
         activityDropDown.selectedIndex = 0;
     }
     reset()
+
 
 }
 
