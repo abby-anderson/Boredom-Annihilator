@@ -1,21 +1,61 @@
 {
-    "saved-activities": [
-        {
-            "name": "To do this weekend",
-            "activities": ["Create a cookbook with your favorite recipes", "Go for a run", "Go to a nail salon"]
-        },
-        {
-            "name": "Next month",
-            "activities": ["Color", "Have a photo session with some friends", "Write a note of appreciation to someone"]
-        },
-        {
-            "name": "winter goals",
-            "activities": ["Go skiing", "Visit the beach", "Read War and Peace"]
-        }
-    ],
-    "completed-activities": [
-        {"activity": "Learn how to whistle with your fingers"},
-        {"activity": "Create and follow a savings plan"},
-        {"activity": "Prepare a dish from a foreign culture"}
-    ]
+  "saved-activities": [
+    {
+      "name": "To do this weekend",
+      "activities": [
+        "Create a cookbook with your favorite recipes",
+        "Go for a run",
+        "Go to a nail salon"
+      ],
+      "id": "1"
+    },
+    {
+      "name": "Next month",
+      "activities": [
+        "Color",
+        "Have a photo session with some friends",
+        "Write a note of appreciation to someone"
+      ],
+      "id": "2"
+    },
+    {
+      "name": "winter goals",
+      "activities": [
+        "Go skiing",
+        "Visit the beach",
+        "Read War and Peace"
+      ],
+      "id": "3"
+    },
+    {
+      "name": "asdf",
+      "activity": [
+        "Start a daily journal",
+        "Hold a yard sale"
+      ],
+      "id": "pbVqSRy"
+    },
+    {
+      "name": "asdf",
+      "activity": [
+        "Improve your touch typing",
+        "Watch the sunset or the sunrise"
+      ],
+      "id": "NRknYRD"
+    }
+  ],
+  "completed-activities": [
+    {
+      "activity": "Learn how to whistle with your fingers",
+      "id": "1"
+    },
+    {
+      "activity": "Create and follow a savings plan",
+      "id": "2"
+    },
+    {
+      "activity": "Prepare a dish from a foreign culture",
+      "id": "3"
+    }
+  ]
 }

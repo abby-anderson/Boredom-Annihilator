@@ -2,6 +2,7 @@ let init = () => {
     console.log('bored? here are some ideas:');
 }
 
+const BASE_URL = "http://localhost:3000/saved-activities";
 const activity_url = "https://www.boredapi.com/api/activity";
 
 const container = document.querySelector('#activity-container');
@@ -27,41 +28,56 @@ let selectActivity = (event) => {
 }
 
 
+//called on submit event when the name of a list is saved
+//by listName.addEventListener('submit', saveActivity);
+
 let saveActivity = (event) => {
     //this function saves specific selected activities to a local db list
-    console.log(event);
     event.preventDefault();
     
-    //here's where we could add the fetch POST to save these to the local db
-    const newListName = document.querySelector("input#list-name-input");
-    const newListNameValue = newListName.value;
-    console.log(newListNameValue);
+    const newListName = document.querySelector("input#list-name-input").value;
+    console.log(newListName); //for name of newListSavedObj
 
     //now, how to grab the list elements that are now in the form. maybe something about children with class = selected-list-element
-    let listArray = document.querySelectorAll('.selected-list-element');
-    console.log(typeof listArray);
-    console.log(listArray);
+    let listNodes = document.querySelectorAll('.selected-list-element');
+    const listArray = [...listNodes]
+    const newListArray = [];
 
-    let listArrayTwo = document.getElementsByClassName('.selected-list-element');
-    console.log(listArrayTwo);
+    listArray.forEach(element => {
+        console.log(element.lastChild.textContent);
+        const newActivity = element.lastChild.textContent;
+        //for activities saved to newListSavedObj
+        console.log(newActivity);
+        newListArray.push(newActivity);
+        console.log(newListArray);
+        return newListArray;
+    });
 
-    //#selected-activities - ul, parent node
-    //.selected-list-element could be child nodes?
-    let listArrayThree = document.getElementById('#selected-activities');
-    let childNodeList = listArrayThree.childNodes;
-    console.log(childNodeList);
+    // creating a new object to save to the local db
+    const newListSavedObj = {
+        name: newListName, 
+        activities: newListArray,//selected list element
+        //id: , //automatically assigned?
+    }
 
-
-    //creating a new object to save to the local db
-    // const newListSavedObj = {
-    //     name: newListNameValue, 
-    //     activity: ,//selected list element
-    //     id: , //automatically assigned?
-    // }
+    console.log(newListSavedObj);
 
     //then do fetch request to post this to the local db
+    const configObj = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newListSavedObj),
+    };
+
+    fetch(BASE_URL, configObj)
+    .then(response => response.json())
+    .then(data => console.log(data));
+    listName.reset();
     
-    
+    //once the spot is created, will want to add the title to a section where you can see all your saved list titles. that way you can click on them and see the activity items
+
 }
 
 let deleteActivity = (event) => {
@@ -75,11 +91,18 @@ let deleteActivity = (event) => {
 
 let callSavedActivity = () => {
     //this function lets you click on the title/heading/whatever of a saved list and see the items on the list
+    //which means we'll need to add a click event on the title/button once it's created! 
     
     //this would likely be a get request to the local db, and would show them on the page
+    fetch(BASE_URL)
+    .then(response => response.json())
+    .then(data => console.log(data));
+//instead of console.log(data), could render just the title of the saved activity, OR the title, and list elements, and done and delete buttons (you wouldn't want to render the save button since these activities are already saved!)
     
 }
 
+
+//already added click event to done button inside the render fxn, click event will call complete activity
 let completeActivity = () => {
     //this function will be called when you click on the done button, and it will save to a list of completed activities on the local db
 }
@@ -90,8 +113,10 @@ let renderActivity = (data) => {
     console.log(newActivity);
     
     const newLi = document.createElement('li');
-    newLi.textContent = newActivity;
+    const newSpan = document.createElement('span');
+    newSpan.textContent = newActivity;
     newLi.className = 'new-list-element';
+    newLi.appendChild(newSpan);
     listContainer.appendChild(newLi);
     
     //change the 'save' text to a heart
