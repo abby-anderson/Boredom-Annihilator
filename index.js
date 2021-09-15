@@ -237,14 +237,7 @@ activityDropDown.addEventListener('change', handleChangeFactory)
 /////////
 
 
-let anotherFunction = () => {
-    console.log("Yoink!")
-}
 
-
-let testFunction = () => {
-    console.log("Hey guys, I'm a troll")
-}
 
 
 
