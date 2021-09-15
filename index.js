@@ -77,11 +77,41 @@ let callSavedActivity = () => {
     //this function lets you click on the title/heading/whatever of a saved list and see the items on the list
     
     //this would likely be a get request to the local db, and would show them on the page
+
+    let postSavedActivity = () => {
+        fetch("url", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+  },
+            body: JSON.stringify({
+            name: "",
+            activities: "",
+  }),
+});
+
+    }
     
 }
 
 let completeActivity = () => {
+
     //this function will be called when you click on the done button, and it will save to a list of completed activities on the local db
+
+    let postCompleteActivity = () => {
+        fetch("url", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Accept: "application/json",
+  },
+  body: JSON.stringify({
+    activity: "",
+    
+  }),
+});
+    }
 }
 
 let renderActivity = (data) => {
@@ -143,6 +173,11 @@ let renderType = (type) => {
     typeLi.id = "type-li"
     typeLi.innerText = type
     activityListByType.append(typeLi)
+    ///what do we want to do with this? add it to its own container or add it to eh existing list?
+    function reset(){
+        activityDropDown.selectedIndex = 0;
+    }
+    reset()
 }
 
 // let type_Url = 'http://www.boredapi.com/api/activity?type='
@@ -187,6 +222,8 @@ let handleChangeFactory = (event) => {
         } else if (activityType === 'busywork') {
         fetchForDropdown(type_Url + `${activityType}`)
         }
+
+
 
 
 }
