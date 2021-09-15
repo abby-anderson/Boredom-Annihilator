@@ -1,24 +1,33 @@
 .center{
+  top: 0px;
   margin: auto;
-  width: 800px;
-  height: 390px;
-  padding: 10px;
+  width: 640px;
+  height: 304px;
+  /* padding: 10px; */
+  /* border: 3px solid green; */
 }
+
+ 
+
+/* div {
+  border: 3px solid greenyellow;
+}  */
+
 .stuffholder{
-text-align: center;
+  text-align: left;
   padding: 10px;
-  /* width: 50%; */
+  width: 50%;
   margin: auto;
   border: 3px;
-  border-color: #ff0000;
 }
 
 .new-list-element{
   list-style-type: none;
 }
 
-#into{
-  scale: 30%;
+li{
+  list-style-type: none;
+
 }
 #heading{
   text-align: center;
@@ -54,7 +63,7 @@ text-align: center;
 }
 
 body {
-  margin: auto;
+  margin: 0px;
   color:rgb(255, 0, 234);
   background-color: #00004B;
   background-image: url("../images/background.jpg");
@@ -67,16 +76,17 @@ body {
 }
 
 /*div {
-  background: linear-gradient(to bottom right, #00004b 0%, #31314b 100%);
 }*/
 
 .left {
   float: left;
+  width: 25%;
   padding-right: 15px;
 }
 
 .right {
   float: right;
+  width: 25%;
   padding-left: 15px;
 }
 
@@ -95,9 +105,6 @@ a {
   color: hotpink;
 }
 
-.smallify{
-  scale: 50%;
-}
 
 img {
   width: 50%;
@@ -107,12 +114,13 @@ img {
 
 
 .bgimg {
-  background-image: url('../images/mediumlogo.png');
+  background-image: url('../images/scaledlogo.png');
   background-repeat: no-repeat;
   background-position: center; 
   position: relative;
  
 }
+
 
 #parent {
   display: flex;
@@ -130,8 +138,36 @@ img {
 
   /* Just so it's visible */
 }
-.bottomofdiv {
-  position:absolute;                 
-  bottom:0;                         
-  left:0;                         
+
+
+
+/* #header {
+  position: relative;
+  min-height: 150px;
 }
+
+#header-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#header, #header * {
+  background: rgba(40, 40, 100, 0.25);
+} */
+
+.child {
+
+  height:220px;
+  margin:5px;}
+
+
+  .thirds1{
+    float: left;
+    width: 250px;
+  }
+  .thirds3{
+    text-align: right;
+    float: right;
+    width: 213px;
+  }
