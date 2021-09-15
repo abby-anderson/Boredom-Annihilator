@@ -78,20 +78,20 @@ let callSavedActivity = () => {
     
     //this would likely be a get request to the local db, and would show them on the page
 
-    let postSavedActivity = () => {
-        fetch("url", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-  },
-            body: JSON.stringify({
-            name: "",
-            activities: "",
-  }),
-});
+//     let postSavedActivity = () => {
+//         fetch("url", {
+//             method: "POST",
+//             headers: {
+//                 "Content-Type": "application/json",
+//                 Accept: "application/json",
+//   },
+//             body: JSON.stringify({
+//             name: "",
+//             activities: "",
+//   }),
+// });
 
-    }
+//     }
     
 }
 
@@ -99,19 +99,19 @@ let completeActivity = () => {
 
     //this function will be called when you click on the done button, and it will save to a list of completed activities on the local db
 
-    let postCompleteActivity = () => {
-        fetch("url", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    Accept: "application/json",
-  },
-  body: JSON.stringify({
-    activity: "",
+//     let postCompleteActivity = () => {
+//         fetch("url", {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//     Accept: "application/json",
+//   },
+//   body: JSON.stringify({
+//     activity: "",
     
-  }),
-});
-    }
+//   }),
+// });
+//     }
 }
 
 let renderActivity = (data) => {
