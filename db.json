@@ -1,21 +1,107 @@
 {
-    "saved-activities": [
-        {
-            "name": "To do this weekend",
-            "activities": ["Create a cookbook with your favorite recipes", "Go for a run", "Go to a nail salon"]
-        },
-        {
-            "name": "Next month",
-            "activities": ["Color", "Have a photo session with some friends", "Write a note of appreciation to someone"]
-        },
-        {
-            "name": "winter goals",
-            "activities": ["Go skiing", "Visit the beach", "Read War and Peace"]
-        }
-    ],
-    "completed-activities": [
-        {"activity": "Learn how to whistle with your fingers"},
-        {"activity": "Create and follow a savings plan"},
-        {"activity": "Prepare a dish from a foreign culture"}
-    ]
+  "saved-activities": [
+    {
+      "name": "To do this weekend",
+      "activities": [
+        "Create a cookbook with your favorite recipes",
+        "Go for a run",
+        "Go to a nail salon"
+      ],
+      "id": "1"
+    },
+    {
+      "name": "Next month",
+      "activities": [
+        "Color",
+        "Have a photo session with some friends",
+        "Write a note of appreciation to someone"
+      ],
+      "id": "2"
+    },
+    {
+      "name": "winter goals",
+      "activities": [
+        "Go skiing",
+        "Visit the beach",
+        "Read War and Peace"
+      ],
+      "id": "3"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Learn the NATO phonetic alphabet"
+      ],
+      "id": "i5_Jj9L"
+    },
+    {
+      "name": "",
+      "activities": [],
+      "id": "2Ltx0_H"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Start a collection"
+      ],
+      "id": "7RWTvby"
+    },
+    {
+      "name": "",
+      "activities": [],
+      "id": "6BbPYwL"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Prepare a 72-hour kit"
+      ],
+      "id": "0zzNR4P"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Start a blog for something you're passionate about"
+      ],
+      "id": "cHpOpZa"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Start a blog for something you're passionate about",
+        "Conquer one of your fears"
+      ],
+      "id": "njA0tgF"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Start a blog for something you're passionate about",
+        "Conquer one of your fears"
+      ],
+      "id": "HD44hjA"
+    },
+    {
+      "name": "asdf",
+      "activities": [
+        "Start a blog for something you're passionate about",
+        "Conquer one of your fears"
+      ],
+      "id": "bERHkbg"
+    }
+  ],
+  "completed-activities": [
+    {
+      "activity": "Learn how to whistle with your fingers",
+      "id": "1"
+    },
+    {
+      "activity": "Create and follow a savings plan",
+      "id": "2"
+    },
+    {
+      "activity": "Prepare a dish from a foreign culture",
+      "id": "3"
+    }
+  ]
 }

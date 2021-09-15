@@ -3,10 +3,8 @@
 <head>
     <link href="CSS/bootstrap.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="CSS/styles.css">
-    
     <script defer src="index.js"></script>
 </head>
-
 <body>
     <div class="center bgimg">
     <div id="activity-container" class="">
@@ -19,6 +17,7 @@
         <br>        <br>
         <br>        <br>
         <br>
+
         <button class="btn btn-primary" id="random-button">Annihilate my Boredom!</button>
         
         
@@ -27,19 +26,22 @@
 
 <div id=parent>
     <div id="narrow">
-        <img src="images/largesave.png"
+        <img src="images/largesave.png">
+
         <form id="list-name" class="">
             <label></label>
             <input type="text" id="list-name-input" />
             <input type="submit" value="Submit" />
             <ul id="selected-activities" class="">
-                
+
             </ul>
         </form>
     </div>
     <div id="wide">
+
         <img src='images/largetype.png'>
         <div id="dropdown-container" class="">
+
             <label for="select-activity"></label>
             <select id="activity-dropdown" name="select-activity">
                 <option></option>
@@ -54,14 +56,27 @@
                 <option value ="busywork">Busywork</option>
             </select>
             <ul id="activities-by-type-container" class="">
-                
+
             </ul>
         </div>
+    </div>
+
+    <div id="completed-list-container">
+        <ul id="completed-list">
+
+        </ul>
+
+    </div>
+
+    <div id="saved-list-container">
+        <ul id="saved-lists">
+
+        </ul>
+
     </div>
     
 </div>
 <div id="list-container" class="stuffholder"></div>
 
 </body>
-
 </html>
