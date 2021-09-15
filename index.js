@@ -133,9 +133,6 @@ let activityFactory = (event) => {
 
 listName.addEventListener('submit', saveActivity);
 randomButton.addEventListener('click', activityFactory)
-<<<<<<< HEAD
-document.addEventListener('DOMContentLoaded', init);
-=======
 
 ////////dropdown
 
@@ -212,7 +209,6 @@ let testFunction = () => {
     console.log("Hey guys, I'm a troll")
 }
 
->>>>>>> 26fa763c7d6dee5558fad2feaf8ac1f464fe634d
 
 
 
@@ -229,7 +225,4 @@ let testFunction = () => {
 
 
 
-<<<<<<< HEAD
-=======
 document.addEventListener('DOMContentLoaded', init);
->>>>>>> 26fa763c7d6dee5558fad2feaf8ac1f464fe634d
