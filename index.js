@@ -12,6 +12,9 @@ const formSave = document.querySelector('form-save');
 const formList = document.querySelector('#selected-activities');
 const activityDropDown = document.querySelector('#activity-dropdown')
 const activityListByType = document.querySelector('#activities-by-type-container')
+
+
+
 let selectActivity = (event) => {
     //this function is to actually handle the selection of activities so that they can be saved on submit
     //rn i'm thinking that, when someone clicks 'save' on an activity, it moves it down to a selection below. once they have a list they want to save, they give it a name, and click 'submit', which will trigger the saveActivity fucntion to actually save the list to the db!
@@ -135,6 +138,9 @@ let completeActivity = () => {
 // });
 //     }
 }
+// const partyConfetti = document.createElement('confetti')
+// const partySparkles = document.createElement('sparkles')
+
 let renderActivity = (data) => {
     //console.log(data)
     const newActivity = data;
@@ -164,7 +170,15 @@ let renderActivity = (data) => {
     doneButton.className = 'done-button';
     doneButton.className = 'btn btn-success pushingtotheside';
     newLi.prepend(doneButton);
-    doneButton.addEventListener('click', completeActivity);
+    doneButton.addEventListener('click', (event) => {
+        event.preventDefault()
+        completeActivity() 
+        party.confetti(event, {
+            shapes: ["star"],
+            gravity: 75
+        })
+        // party.sparkles(event)
+    });
 }
 let fetchData = (url) => {
     fetch(url)
