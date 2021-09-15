@@ -165,6 +165,12 @@ let renderActivity = (data) => {
     doneButton.className = 'btn btn-success pushingtotheside';
     newLi.prepend(doneButton);
     doneButton.addEventListener('click', completeActivity);
+
+    function reset(){
+        activityDropDown.selectedIndex = 0;
+    }
+    reset()
+
 }
 let fetchData = (url) => {
     fetch(url)
@@ -180,23 +186,25 @@ randomButton.addEventListener('click', activityFactory);
 document.addEventListener('DOMContentLoaded', init);
 
 ////////dropdown
-let renderType = (type) => {
-    let typeLi = document.createElement('li')
-    typeLi.id = "type-li"
-    typeLi.innerText = type
-    activityListByType.append(typeLi)
-    ///what do we want to do with this? add it to its own container or add it to eh existing list?
-    function reset(){
-        activityDropDown.selectedIndex = 0;
-    }
-    reset()
-}
+// renderActivity = () => {
+//     // let typeLi = document.createElement('li')
+//     // typeLi.id = "type-li"
+//     // typeLi.innerText = type
+//     // activityListByType.append(typeLi)
+//     ///what do we want to do with this? add it to its own container or add it to eh existing list?
+    // function reset(){
+    //     activityDropDown.selectedIndex = 0;
+    // }
+    // reset()
+// }
 // let type_Url = 'http://www.boredapi.com/api/activity?type='
 let fetchForDropdown = (url) => {
     fetch(url)
     .then(response => response.json())
-    .then(type => renderType(type.activity))
+    .then(type => renderActivity(type.activity))
 }
+
+
 let handleChangeFactory = (event) => {
     let type_Url = 'http://www.boredapi.com/api/activity?type='
     let activityType = event.target.value
