@@ -94,17 +94,50 @@ let callSavedActivity = () => {
     //which means we'll need to add a click event on the title/button once it's created! 
     
     //this would likely be a get request to the local db, and would show them on the page
+
+
+//     let postSavedActivity = () => {
+//         fetch("url", {
+//             method: "POST",
+//             headers: {
+//                 "Content-Type": "application/json",
+//                 Accept: "application/json",
+//   },
+//             body: JSON.stringify({
+//             name: "",
+//             activities: "",
+//   }),
+// });
+
+//     }
+
     fetch(BASE_URL)
     .then(response => response.json())
     .then(data => console.log(data));
 //instead of console.log(data), could render just the title of the saved activity, OR the title, and list elements, and done and delete buttons (you wouldn't want to render the save button since these activities are already saved!)
+
     
 }
 
 
 //already added click event to done button inside the render fxn, click event will call complete activity
 let completeActivity = () => {
+
     //this function will be called when you click on the done button, and it will save to a list of completed activities on the local db
+
+//     let postCompleteActivity = () => {
+//         fetch("url", {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//     Accept: "application/json",
+//   },
+//   body: JSON.stringify({
+//     activity: "",
+    
+//   }),
+// });
+//     }
 }
 
 let renderActivity = (data) => {
@@ -162,7 +195,6 @@ document.addEventListener('DOMContentLoaded', init);
 
 
 
-
 ////////dropdown
 
 
@@ -172,6 +204,11 @@ let renderType = (type) => {
     typeLi.id = "type-li"
     typeLi.innerText = type
     activityListByType.append(typeLi)
+    ///what do we want to do with this? add it to its own container or add it to eh existing list?
+    function reset(){
+        activityDropDown.selectedIndex = 0;
+    }
+    reset()
 }
 
 // let type_Url = 'http://www.boredapi.com/api/activity?type='
@@ -218,6 +255,8 @@ let handleChangeFactory = (event) => {
         }
 
 
+
+
 }
 
 
@@ -227,17 +266,6 @@ activityDropDown.addEventListener('change', handleChangeFactory)
 
 
 /////////
-
-
-let anotherFunction = () => {
-    console.log("Yoink!")
-}
-
-
-let testFunction = () => {
-    console.log("Hey guys, I'm a troll")
-}
-
 
 
 
@@ -253,5 +281,3 @@ let testFunction = () => {
 //choose from a drop down menu of types if you have an idea of what you might be interested in
 
 document.addEventListener('DOMContentLoaded', init);
-
-
