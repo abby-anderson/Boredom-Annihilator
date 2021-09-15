@@ -28,20 +28,185 @@
       "id": "3"
     },
     {
-      "name": "asdf",
-      "activity": [
-        "Start a daily journal",
-        "Hold a yard sale"
+      "name": "",
+      "activities": [
+        "Learn the NATO phonetic alphabet"
       ],
-      "id": "pbVqSRy"
+      "id": "i5_Jj9L"
+    },
+    {
+      "name": "",
+      "activities": [],
+      "id": "2Ltx0_H"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Start a collection"
+      ],
+      "id": "7RWTvby"
+    },
+    {
+      "name": "",
+      "activities": [],
+      "id": "6BbPYwL"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Prepare a 72-hour kit"
+      ],
+      "id": "0zzNR4P"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Start a blog for something you're passionate about"
+      ],
+      "id": "cHpOpZa"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Start a blog for something you're passionate about",
+        "Conquer one of your fears"
+      ],
+      "id": "njA0tgF"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Start a blog for something you're passionate about",
+        "Conquer one of your fears"
+      ],
+      "id": "HD44hjA"
     },
     {
       "name": "asdf",
-      "activity": [
-        "Improve your touch typing",
-        "Watch the sunset or the sunrise"
+      "activities": [
+        "Start a blog for something you're passionate about",
+        "Conquer one of your fears"
       ],
-      "id": "NRknYRD"
+      "id": "bERHkbg"
+    },
+    {
+      "activity": "Take a spontaneous road trip with some friends",
+      "id": "oiZ-Mxd"
+    },
+    {
+      "activity": "Shop at support your local farmers market",
+      "id": "KGtVzJF"
+    },
+    {
+      "activity": "Draw something interesting",
+      "id": "BF-AvpI"
+    },
+    {
+      "activity": "Play a game of Monopoly",
+      "id": "JTBIqt4"
+    },
+    {
+      "activity": "Have a bonfire with your close friends",
+      "id": "qqOuOQu"
+    },
+    {
+      "activity": "Make a new friend",
+      "id": "prj592F"
+    },
+    {
+      "activity": "Learn to write with your nondominant hand",
+      "id": "_EjM1Uo"
+    },
+    {
+      "activity": "Clean out your garage",
+      "id": "tLOOWXL"
+    },
+    {
+      "activity": "Color",
+      "id": "fVeffEU"
+    },
+    {
+      "activity": "Go to the gym",
+      "id": "YUOKpr7"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Watch a Khan Academy lecture on a subject of your choosing"
+      ],
+      "id": "bbi0gSG"
+    },
+    {
+      "activity": "Learn calligraphy",
+      "id": "PK_cCBm"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Watch a Khan Academy lecture on a subject of your choosing",
+        "Learn woodworking"
+      ],
+      "id": "qbmR4hI"
+    },
+    {
+      "activity": "Color",
+      "id": "q3bK4kz"
+    },
+    {
+      "activity": "Pot some plants and put them around your house",
+      "id": "u_RWDG9"
+    },
+    {
+      "activity": "Text a friend you haven't talked to in a long time",
+      "id": "ayxbKQJ"
+    },
+    {
+      "activity": "Color",
+      "id": "YuzJg1X"
+    },
+    {
+      "activity": "Text a friend you haven't talked to in a long time",
+      "id": "D9v1itV"
+    },
+    {
+      "activity": "Text a friend you haven't talked to in a long time",
+      "id": "_-5HLAQ"
+    },
+    {
+      "name": "drt",
+      "activities": [],
+      "id": "pyhRKeS"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Contribute code or a monetary donation to an open-source software project"
+      ],
+      "id": "K-UX0eF"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Contribute code or a monetary donation to an open-source software project",
+        "Create and follow a savings plan"
+      ],
+      "id": "IsWBJ0K"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Contribute code or a monetary donation to an open-source software project",
+        "Create and follow a savings plan"
+      ],
+      "id": "hFaCoqZ"
+    },
+    {
+      "name": "drt",
+      "activities": [
+        "Contribute code or a monetary donation to an open-source software project",
+        "Create and follow a savings plan"
+      ],
+      "id": "754gk5w"
     }
   ],
   "completed-activities": [
