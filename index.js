@@ -98,6 +98,7 @@ const formSave = document.querySelector('form-save');
 const formList = document.querySelector('#selected-activities');
 const activityDropDown = document.querySelector('#activity-dropdown')
 const activityListByType = document.querySelector('#activities-by-type-container')
+
 const completedList = document.querySelector('#completed-list');
 const savedLists = document.querySelector('#saved-lists');
 
@@ -105,12 +106,15 @@ const savedLists = document.querySelector('#saved-lists');
 //called on click event when the save button on a list item is clicked
 //applied to save button inside render function
 //saveButton.addEventListener('click', selectActivity);
+
 let selectActivity = (event) => {
     //this function is to actually handle the selection of activities so that they can be saved on submit
     const selectedActivity = event.target.parentNode;
     selectedActivity.className = 'selected-list-element';
     console.log(event.target.parentNode);
     formList.append(selectedActivity);
+
+
 }
 
 
@@ -181,21 +185,6 @@ let callSavedActivity = () => {
     //this would likely be a get request to the local db, and would show them on the page
 
 
-//     let postSavedActivity = () => {
-//         fetch("url", {
-//             method: "POST",
-//             headers: {
-//                 "Content-Type": "application/json",
-//                 Accept: "application/json",
-//   },
-//             body: JSON.stringify({
-//             name: "",
-//             activities: "",
-//   }),
-// });
-
-//     }
-
     fetch(BASE_URL)
     .then(response => response.json())
     .then(data => console.log(data));
@@ -217,20 +206,33 @@ let completeActivity = (event) => {
     //completedActivity.removeChild('ID')
     completedList.append(completedActivity);
 
-//     let postCompleteActivity = () => {
-//         fetch("url", {
-//   method: "POST",
-//   headers: {
-//     "Content-Type": "application/json",
-//     Accept: "application/json",
-//   },
-//   body: JSON.stringify({
-//     activity: "",
+    //selecting the activity within completedActivity 
+    const completedActivityValue = completedActivity.lastChild.innerText
+
+    //making new obj for post request
+    const newListCompletedObj = {
+        activity: completedActivityValue
+    }
+    console.log(newListCompletedObj)
+
+    //fetch request to POST to local db
+    const configCompletedObj = {
+        method: "POST",
+        headers: {
+            "content-Type": "application/json",
+        },
+        body: JSON.stringify(newListCompletedObj)
+    };
     
-//   }),
-// });
-//     }
-}
+    fetch(BASE_URL, configCompletedObj)
+    .then(response => response.json())
+    .then(data => data);
+
+} //////ITS ADDING TO THE END OF SAVED ACTIVITIES NOT COMPLETED
+///should we have 2 db one for saved one for completed?
+
+
+
 
 let renderActivity = (data) => {
     const newActivity = data;
@@ -261,12 +263,22 @@ let renderActivity = (data) => {
     doneButton.className = 'done-button';
     doneButton.className = 'btn btn-success pushingtotheside';
     newLi.prepend(doneButton);
-    doneButton.addEventListener('click', completeActivity);
+    doneButton.addEventListener('click', (event) => {
+        event.preventDefault()
+        completeActivity(event) 
+
+        party.confetti(event, {
+            shapes: ["star"],
+            gravity: 75
+        })
+        // party.sparkles(event)
+    });
 
     function reset(){
         activityDropDown.selectedIndex = 0;
     }
     reset()
+
 
 }
 
@@ -332,7 +344,6 @@ let handleChangeFactory = (event) => {
     let type_Url = 'http://www.boredapi.com/api/activity?type='
 
     let activityType = event.target.value
-    console.log(activityType)
 
         if (activityType === 'education') {
         fetchForDropdown(type_Url + `${activityType}`)
