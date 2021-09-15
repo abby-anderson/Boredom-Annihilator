@@ -1,11 +1,94 @@
 let init = () => {
     console.log('bored? here are some ideas:');
     //fetch the completed tasks and render them to the page
+    fetch(completed_activities_url)
+    .then(response => response.json())
+    .then(data => data.forEach(factoryCompletedActivities)) //returns array of objects! so we should be able to data.foreach
+
+
     //fetch the saved lists of tasks and render them to the page
+    fetch(saved_activities_url)
+    .then(response => response.json())
+    .then(data => data.forEach(factorySavedActivities)) //returns array of objects! so we should be able to data.foreach
+
+    //probs will actually just call render on both the above results!
+}
+
+let factorySavedActivities = (obj) => {
+    //console.log(obj.name) 
+
+    const listName = document.createElement('li')
+    listName.textContent = obj.name
+
+    console.log(obj.activities) //array
+    obj.activities.forEach(function(element){
+        //create new list items 
+        const newLi = document.createElement('li')
+        newLi.textContent = element;
+        console.log(newLi);
+
+        //add buttons
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'delete 🗑️';
+        deleteButton.className = 'delete-button pushingtotheside';
+        deleteButton.className = 'btn btn-danger';
+        newLi.prepend(deleteButton);
+        deleteButton.addEventListener('click', deleteActivity);
+
+        const doneButton = document.createElement('button');
+        doneButton.textContent = 'done ✅';
+        doneButton.className = 'done-button';
+        doneButton.className = 'btn btn-success pushingtotheside';
+        newLi.prepend(doneButton);
+        doneButton.addEventListener('click', completeActivity);
+
+        //append as children to listName
+        listName.appendChild(newLi)
+    })
+    
+    //and then append listName to the saved lists container which is called savedLists
+    savedLists.appendChild(listName);
+
+
+}
+
+let renderSavedActivity = (data) => {
+    console.log(data)
+}
+
+let factoryCompletedActivities = (obj) => {
+    renderCompletedActivities(obj.activity);
+}
+
+let renderCompletedActivities = (data) => {
+    const completedActivity = data;
+    
+    const newLi = document.createElement('li');
+    const newSpan = document.createElement('span');
+    newSpan.textContent = completedActivity;
+    newLi.className = 'new-list-element';
+    newLi.appendChild(newSpan);
+    completedList.appendChild(newLi);
+    
+    const saveButton = document.createElement('button');
+    saveButton.textContent = "save ♥";
+    saveButton.className = 'btn btn-primary pushingtotheside'; 
+    newLi.prepend(saveButton);
+    saveButton.addEventListener('click', selectActivity);
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'delete 🗑️';
+    deleteButton.className = 'delete-button pushingtotheside';
+    deleteButton.className = 'btn btn-danger';
+    newLi.prepend(deleteButton);
+    deleteButton.addEventListener('click', deleteActivity);
+
 }
 
 const BASE_URL = "http://localhost:3000/saved-activities";
 const activity_url = "https://www.boredapi.com/api/activity";
+const saved_activities_url = "http://localhost:3000/saved-activities";
+const completed_activities_url = "http://localhost:3000/completed-activities";
 
 const container = document.querySelector('#activity-container');
 const listContainer = document.querySelector('#list-container');
@@ -16,8 +99,8 @@ const formList = document.querySelector('#selected-activities');
 const activityDropDown = document.querySelector('#activity-dropdown')
 const activityListByType = document.querySelector('#activities-by-type-container')
 const completedList = document.querySelector('#completed-list');
-//still need to create and grab ul element for completed lists, and define it here!
-//same with saved lists
+const savedLists = document.querySelector('#saved-lists');
+
 
 //called on click event when the save button on a list item is clicked
 //applied to save button inside render function
@@ -130,8 +213,9 @@ let completeActivity = (event) => {
     const completedActivity = event.target.parentNode;
     completedActivity.className = 'completed-list-element';
     console.log(completedActivity);
+    //would like to figure out how to remove the done button, since we're marking the item as done in this function
+    //completedActivity.removeChild('ID')
     completedList.append(completedActivity);
-    //****IMPORTANT - still need to create div, ul element containtainer for these li, then grab the ul element and name it completedList
 
 //     let postCompleteActivity = () => {
 //         fetch("url", {
