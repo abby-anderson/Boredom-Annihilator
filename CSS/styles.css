@@ -2,7 +2,6 @@
   margin: auto;
   width: 800px;
   height: 390px;
-  border: 3px solid green;
   padding: 10px;
 }
 
@@ -43,6 +42,8 @@ body {
   margin: auto;
   color:orangered;
   background-color: #00004B;
+  background-image: url("../images/background.jpg");
+  background-size:100% auto;
 }
 
 .jumbotron{
@@ -91,7 +92,7 @@ img {
 
 
 .bgimg {
-  background-image: url('../images/mediumlogo.jpg');
+  background-image: url('../images/mediumlogo.png');
   background-repeat: no-repeat;
   background-position: center; 
   position: relative;
@@ -100,23 +101,22 @@ img {
 
 #parent {
   display: flex;
-  border: 3px solid green;
   width: 500px;
   margin: auto;
 
 }
 #narrow {
   width: 50%;
-  background: lightblue;
-  border: 3px solid rgb(76, 0, 255);
-
   /* Just so it's visible */
 }
 #wide {
   flex: 1;
   /* Grow to rest of container */
-  background: lightgreen;
-  border: 3px solid rgb(255, 0, 0);
 
   /* Just so it's visible */
+}
+.bottomofdiv {
+  position:absolute;                 
+  bottom:0;                         
+  left:0;                         
 }
