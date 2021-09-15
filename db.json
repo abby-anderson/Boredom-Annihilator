@@ -88,6 +88,65 @@
         "Conquer one of your fears"
       ],
       "id": "bERHkbg"
+    },
+    {
+      "activity": "Take a spontaneous road trip with some friends",
+      "id": "oiZ-Mxd"
+    },
+    {
+      "activity": "Shop at support your local farmers market",
+      "id": "KGtVzJF"
+    },
+    {
+      "activity": "Draw something interesting",
+      "id": "BF-AvpI"
+    },
+    {
+      "activity": "Play a game of Monopoly",
+      "id": "JTBIqt4"
+    },
+    {
+      "activity": "Have a bonfire with your close friends",
+      "id": "qqOuOQu"
+    },
+    {
+      "activity": "Make a new friend",
+      "id": "prj592F"
+    },
+    {
+      "activity": "Learn to write with your nondominant hand",
+      "id": "_EjM1Uo"
+    },
+    {
+      "activity": "Clean out your garage",
+      "id": "tLOOWXL"
+    },
+    {
+      "activity": "Color",
+      "id": "fVeffEU"
+    },
+    {
+      "activity": "Go to the gym",
+      "id": "YUOKpr7"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Watch a Khan Academy lecture on a subject of your choosing"
+      ],
+      "id": "bbi0gSG"
+    },
+    {
+      "activity": "Learn calligraphy",
+      "id": "PK_cCBm"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Watch a Khan Academy lecture on a subject of your choosing",
+        "Learn woodworking"
+      ],
+      "id": "qbmR4hI"
     }
   ],
   "completed-activities": [
