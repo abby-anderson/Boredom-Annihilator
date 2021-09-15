@@ -177,8 +177,15 @@ let renderActivity = (data) => {
     doneButton.className = 'done-button';
     doneButton.className = 'btn btn-success pushingtotheside';
     newLi.prepend(doneButton);
-    doneButton.addEventListener('click', completeActivity);
-
+    doneButton.addEventListener('click', (event) => {
+        event.preventDefault()
+        completeActivity() 
+        party.confetti(event, {
+            shapes: ["star"],
+            gravity: 75
+        })
+        // party.sparkles(event)
+    });
     function reset(){
         activityDropDown.selectedIndex = 0;
     }
