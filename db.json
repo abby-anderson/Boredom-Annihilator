@@ -147,6 +147,66 @@
         "Learn woodworking"
       ],
       "id": "qbmR4hI"
+    },
+    {
+      "activity": "Color",
+      "id": "q3bK4kz"
+    },
+    {
+      "activity": "Pot some plants and put them around your house",
+      "id": "u_RWDG9"
+    },
+    {
+      "activity": "Text a friend you haven't talked to in a long time",
+      "id": "ayxbKQJ"
+    },
+    {
+      "activity": "Color",
+      "id": "YuzJg1X"
+    },
+    {
+      "activity": "Text a friend you haven't talked to in a long time",
+      "id": "D9v1itV"
+    },
+    {
+      "activity": "Text a friend you haven't talked to in a long time",
+      "id": "_-5HLAQ"
+    },
+    {
+      "name": "drt",
+      "activities": [],
+      "id": "pyhRKeS"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Contribute code or a monetary donation to an open-source software project"
+      ],
+      "id": "K-UX0eF"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Contribute code or a monetary donation to an open-source software project",
+        "Create and follow a savings plan"
+      ],
+      "id": "IsWBJ0K"
+    },
+    {
+      "name": "",
+      "activities": [
+        "Contribute code or a monetary donation to an open-source software project",
+        "Create and follow a savings plan"
+      ],
+      "id": "hFaCoqZ"
+    },
+    {
+      "name": "drt",
+      "activities": [
+        "Contribute code or a monetary donation to an open-source software project",
+        "Create and follow a savings plan"
+      ],
+      "id": "754gk5w"
     }
   ],
   "completed-activities": [
