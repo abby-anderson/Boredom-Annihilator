@@ -178,7 +178,7 @@ let renderActivity = (data) => {
     newLi.prepend(doneButton);
     doneButton.addEventListener('click', (event) => {
         event.preventDefault()
-        completeActivity() 
+        completeActivity(event) 
         party.confetti(event, {
             shapes: ["star"],
             gravity: 75
@@ -205,7 +205,6 @@ let activityFactory = (event) => {
 
 
 listName.addEventListener('submit', saveActivity);
-// ***.addEventListener('submit', saveCompletedActivity)
 randomButton.addEventListener('click', activityFactory);
 document.addEventListener('DOMContentLoaded', init);
 
