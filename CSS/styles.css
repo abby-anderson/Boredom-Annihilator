@@ -13,6 +13,9 @@ text-align: center;
   border-color: #ff0000;
 }
 
+.new-list-element{
+  list-style-type: none;
+}
 
 #into{
   scale: 30%;
