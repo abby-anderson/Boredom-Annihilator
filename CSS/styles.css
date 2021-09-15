@@ -1,13 +1,11 @@
 .center{
   margin: auto;
-  width: 50%;
-  border: 3px solid green;
+  width: 800px;
+  height: 390px;
   padding: 10px;
 }
-
 #heading{
   text-align: center;
-
 }
 #random-button{
   position: absolute;
@@ -22,7 +20,6 @@
   /* padding: 2px; */ 
   /* text-align: center*/
 }
-
 .pushingtotheside {
   margin: 5px;
   /* margin-right: 15 px; */
@@ -30,39 +27,32 @@
   /* margin-top: 90px;
   margin-bottom: 200px; */
 }
-
-
-
 .banner {
   width: 100px;
   height: 100px;
 }
-
 body {
   margin: auto;
-  color:orangered;
+  color:rgb(255, 0, 234);
   background-color: #00004B;
+  background-image: url("../images/background.jpg");
+  background-size:100% auto;
 }
-
 .jumbotron{
   color: rgb(165, 21, 21);
-  background-color: #ff0000;
+  background-color: #FF0000;
 }
-
 /*div {
-  background: linear-gradient(to bottom right, #00004b 0%, #31314b 100%);
+  background: linear-gradient(to bottom right, #00004B 0%, #31314B 100%);
 }*/
-
 .left {
   float: left;
   padding-right: 15px;
 }
-
 .right {
   float: right;
   padding-left: 15px;
 }
-
 .clearfix::after {
   content: "";
   clear: both;
@@ -76,4 +66,36 @@ color: white;
 }
 a {
   color: hotpink;
+}
+.smallify{
+  scale: 50%;
+}
+img {
+  width: 20%;
+  height: auto;
+}
+.bgimg {
+  background-image: url('../images/mediumlogo.png');
+  background-repeat: no-repeat;
+  background-position: center; 
+  position: relative;
+}
+#parent {
+  display: flex;
+  width: 500px;
+  margin: auto;
+}
+#narrow {
+  width: 50%;
+  /* Just so it's visible */
+}
+#wide {
+  flex: 1;
+  /* Grow to rest of container */
+  /* Just so it's visible */
+}
+.bottomofdiv {
+  position:absolute;                 
+  bottom:0;                         
+  left:0;                         
 }

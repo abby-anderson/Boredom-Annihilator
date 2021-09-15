@@ -3,49 +3,54 @@
 <head>
     <link href="CSS/bootstrap.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="CSS/styles.css">
-    
     <script defer src="index.js"></script>
 </head>
-
 <body>
-    <div class="center">
-    <h1 id="heading">♥ ♥ ♥Boredom ANNIHILATOR♥ ♥ ♥</h1>
+    <div class="center bgimg">
     <div id="activity-container" class="">
-        <div>
-            <button class="btn btn-primary" id="random-button">♥ ♥ ♥Annihilate my Boredom!♥ ♥ ♥</button>        
-        </div>
         <br>
+        <br>        <br>
+        <br>        <br>
+        <br>        <br>
+        <br>        <br>
+        <br>        <br>
+        <br>        <br>
+        <br>        <br>
         <br>
         <div id="list-container" class=""></div>
+        <button class="btn btn-primary" id="random-button">Annihilate my Boredom!</button>
+    </div>
+</div>
+<div id=parent>
+    <div id="narrow">
         <form id="list-name" class="">
             <label><strong>Save list named: </strong></label>
             <input type="text" id="list-name-input" />
             <input type="submit" value="Submit" />
             <ul id="selected-activities" class="">
-
             </ul>
         </form>
-    <div id="dropdown-container" class="">
-        <label for="select-activity">Filter Activities By Type:</label>
-        <select id="activity-dropdown" name="select-activity">
-            <option></option>
-            <option value="education">Education</option>
-            <option value="recreational">Recreation</option>
-            <option value="social">Social</option>
-            <option value="diy">Diy</option>
-            <option value="charity">Charity</option>
-            <option value="cooking">Cooking</option>
-            <option value="relaxation">Relaxation</option>
-            <option value="music">Music</option>
-            <option value ="busywork">Busywork</option>
-        </select>
-        <ul id="activities-by-type-container" class="">
-
-        </ul>
     </div>
-
+    <div id="wide">
+        <div id="dropdown-container" class="">
+            <img src='images/largesave.jpg'>
+            <label for="select-activity"></label>
+            <select id="activity-dropdown" name="select-activity">
+                <option></option>
+                <option value="education">Education</option>
+                <option value="recreational">Recreation</option>
+                <option value="social">Social</option>
+                <option value="diy">Diy</option>
+                <option value="charity">Charity</option>
+                <option value="cooking">Cooking</option>
+                <option value="relaxation">Relaxation</option>
+                <option value="music">Music</option>
+                <option value ="busywork">Busywork</option>
+            </select>
+            <ul id="activities-by-type-container" class="">
+            </ul>
+        </div>
     </div>
 </div>
 </body>
-
 </html>
