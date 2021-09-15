@@ -1,6 +1,7 @@
 let init = () => {
     console.log('bored? here are some ideas:');
 }
+
 const BASE_URL = "http://localhost:3000/saved-activities";
 const activity_url = "https://www.boredapi.com/api/activity";
 const container = document.querySelector('#activity-container');
@@ -21,6 +22,7 @@ let selectActivity = (event) => {
     console.log()
     formList.append(selectedActivity);
 }
+
 //called on submit event when the name of a list is saved
 //by listName.addEventListener('submit', saveActivity);
 let saveActivity = (event) => {
@@ -28,10 +30,15 @@ let saveActivity = (event) => {
     event.preventDefault();
     const newListName = document.querySelector("input#list-name-input").value;
     console.log(newListName); //for name of newListSavedObj
+
+
+
+
     //now, how to grab the list elements that are now in the form. maybe something about children with class = selected-list-element
     let listNodes = document.querySelectorAll('.selected-list-element');
     const listArray = [...listNodes]
     const newListArray = [];
+
     listArray.forEach(element => {
         console.log(element.lastChild.textContent);
         const newActivity = element.lastChild.textContent;
@@ -41,6 +48,7 @@ let saveActivity = (event) => {
         console.log(newListArray);
         return newListArray;
     });
+
     // creating a new object to save to the local db
     const newListSavedObj = {
         name: newListName,
@@ -48,6 +56,7 @@ let saveActivity = (event) => {
         //id: , //automatically assigned?
     }
     console.log(newListSavedObj);
+
     //then do fetch request to post this to the local db
     const configObj = {
         method: "POST",
@@ -56,11 +65,15 @@ let saveActivity = (event) => {
         },
         body: JSON.stringify(newListSavedObj),
     };
+
     fetch(BASE_URL, configObj)
     .then(response => response.json())
     .then(data => console.log(data));
     listName.reset();
+
     //once the spot is created, will want to add the title to a section where you can see all your saved list titles. that way you can click on them and see the activity items
+
+
 }
 let deleteActivity = (event) => {
     //this funtion deletes activities off of a list
@@ -71,16 +84,56 @@ let deleteActivity = (event) => {
 }
 let callSavedActivity = () => {
     //this function lets you click on the title/heading/whatever of a saved list and see the items on the list
-    //which means we'll need to add a click event on the title/button once it's created!
+
+
+    //which means we'll need to add a click event on the title/button once it's created! 
+    
     //this would likely be a get request to the local db, and would show them on the page
+
+
+//     let postSavedActivity = () => {
+//         fetch("url", {
+//             method: "POST",
+//             headers: {
+//                 "Content-Type": "application/json",
+//                 Accept: "application/json",
+//   },
+//             body: JSON.stringify({
+//             name: "",
+//             activities: "",
+//   }),
+// });
+
+//     }
+
     fetch(BASE_URL)
     .then(response => response.json())
     .then(data => console.log(data));
 //instead of console.log(data), could render just the title of the saved activity, OR the title, and list elements, and done and delete buttons (you wouldn't want to render the save button since these activities are already saved!)
+
+
+    
 }
+
+
 //already added click event to done button inside the render fxn, click event will call complete activity
 let completeActivity = () => {
+
     //this function will be called when you click on the done button, and it will save to a list of completed activities on the local db
+
+//     let postCompleteActivity = () => {
+//         fetch("url", {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//     Accept: "application/json",
+//   },
+//   body: JSON.stringify({
+//     activity: "",
+    
+//   }),
+// });
+//     }
 }
 let renderActivity = (data) => {
     //console.log(data)
@@ -125,12 +178,18 @@ let activityFactory = (event) => {
 listName.addEventListener('submit', saveActivity);
 randomButton.addEventListener('click', activityFactory);
 document.addEventListener('DOMContentLoaded', init);
+
 ////////dropdown
 let renderType = (type) => {
     let typeLi = document.createElement('li')
     typeLi.id = "type-li"
     typeLi.innerText = type
     activityListByType.append(typeLi)
+    ///what do we want to do with this? add it to its own container or add it to eh existing list?
+    function reset(){
+        activityDropDown.selectedIndex = 0;
+    }
+    reset()
 }
 // let type_Url = 'http://www.boredapi.com/api/activity?type='
 let fetchForDropdown = (url) => {
@@ -161,15 +220,11 @@ let handleChangeFactory = (event) => {
         } else if (activityType === 'busywork') {
         fetchForDropdown(type_Url + `${activityType}`)
         }
+
 }
 activityDropDown.addEventListener('change', handleChangeFactory)
 /////////
-let anotherFunction = () => {
-    console.log("Yoink!")
-}
-let testFunction = () => {
-    console.log("Hey guys, I'm a troll")
-}
+
 //deliverables to aim for:
 //randomize button, click event DONE QUICKANDIRTY
 //add to a list DONE QUICKANDIRTY
@@ -177,4 +232,8 @@ let testFunction = () => {
 //then the user can choose which list they want to look at, and while looking at the list they can delete items if they want to
 //another stretch goal possibly, allow the user to save activity ideas that they love to a local db, and then they can randomly select from their pile there too
 //choose from a drop down menu of types if you have an idea of what you might be interested in
+
+
+
 document.addEventListener('DOMContentLoaded', init);
+
